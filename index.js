@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 3
 
+app.use(express.static(__dirname + '/static'))
 app.use(cors({ origin: '*' }))
 
 app.get('/about', (request, response) => {
