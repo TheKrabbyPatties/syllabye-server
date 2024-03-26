@@ -15,7 +15,7 @@ app.use(cors({ origin: '*' }))
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
-	response.send('This is a website that utilizes server-side node.js to implement an insurance risk calculator.')
+	response.send('This is a website that utilizes server-side node.js to implement Syllibye.')
 })
 
 app.get('/api/ping', (request, response) => {
