@@ -1,0 +1,57 @@
+{
+    "name": "Software Engineering",
+    "id": "cpsc-44000",
+    "number": 44000,
+    "creditHours": 3,
+    "description": "Methods, strategies, and tools for implementing software systems, particularly as part of a development team. \n\t\tTopics include the software development life cycle, Unified Modeling Language, software testing techniques, \n\t\tsoftware security, open-source development, requirements gathering and documentation, maintenance, and basic\n\t\tsoftware project management.",
+    "prerequisites": "CPSC-24500 Object-Oriented Programming",
+    "learningOutcomes": [
+        "compare and contrast various software process models",
+        "be able to elicit and analyze requirements of a proposed application",
+        "write clear and complete requirements documents",
+        "identify the events to which the software must respond and document them as a set of use cases",
+        "identify security issues in a software projects requirements and design",
+        "use techniques to produce self-documenting code",
+        "use coding strategy to produce secure code",
+        "draw diagrams to model workflows",
+        "develop and use diagrams to model classes and the interaction of classes",
+        "understand and practice unit testing and functional testing",
+        "understand the techniques used to test non-functional requirements such as performance and security",
+        "develop a project schedule"
+    ],
+    "programOutcomes": [
+        {
+            "value": 1,
+            "outcome": "develop programs using languages having different programming paradigms and for a variety of platforms"
+        },
+        {
+            "value": 2,
+            "outcome": "select the most appropriate data structures and algorithms for the given problem"
+        },
+        {
+            "value": 7,
+            "outcome": "explain how programming languages are designed and implemented"
+        }
+    ],
+    "baccalaureateCharacteristics": [
+        {
+            "value": 1,
+            "outcome": "Essential Skills"
+        },
+        {
+            "value": 6,
+            "outcome": "Critical Thinking"
+        }
+    ],
+    "textBook": "Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.",
+    "modules": [
+        "Software Engineering Life Cycles, Software as a Service, Cloud Computing, HTML, and CSS",
+        "Agile, Scrum, Software-As-A-Service, Microsoft Azure, JavaScript, and Ruby on Rails",
+        "Live Scrum Teams, Application Requirements, GitHub, Static Websites, and Node.js",
+        "Class Project Proposal, Testing, Support, and Application Programming Interfaces",
+        "Class Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance",
+        "Class Final Project utilizing Scrum, Software Metrics, and Serverless Computing",
+        "Class Project, Application Frameworks, and React",
+        "Class Final Project, Design Patterns, and Security"
+    ]
+}
