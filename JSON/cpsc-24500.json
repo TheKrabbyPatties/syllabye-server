@@ -1,0 +1,71 @@
+{
+    "name": "Object-Oriented Programming",
+    "id": "cpsc-24500",
+    "number": 24500,
+    "creditHours": 3,
+    "description": "Students will learn to design and develop software using the object-oriented approach. \nTopics include encapsulation, inheritance, polymorphism, abstraction, and patterns. \nStudents will learn how to use an SDK to develop desktop and web applications that provide data processing and visualization services. \nStudents will also learn how to manage threads and networking connections in software they write.",
+    "prerequisites": "CPSC-21000 Programming Fundamentals",
+    "learningOutcomes": [
+        "solve problems by writing programs using standard language elements such as data declarations, arithmetic operations, conditional statements, loops, and functions",
+        "list and explain the key concepts of object-oriented development: inheritance, abstraction, information hiding, and polymorphism.",
+        "describe problems that typically plague software: rigidity, fragility, immobility",
+        "define the following object-oriented patterns: Factory, Singleton, Delegation, and Model-View-Controller",
+        "define and provide examples for object-oriented design principles: Liskov Substitution Principle, Dependency Inversion Principle, Interface Segregation Principle, Open-Close Principle, Single-Responsibility Principle",
+        "write class definitions and create objects from them",
+        "declare and use special types of functions for classes, including constructors, accessors, and mutators, and properties",
+        "create hierarchies of classes that start with abstract base classes and add functionality in descendant classes.",
+        "design an object-oriented program in UML (Unified Modeling Language) that is organized around a set of classes whose objects interact",
+        "describe what exceptions are and write programs that deal with them",
+        "perform screen-scraping by retrieving data from a website.",
+        "write programs that use various collections",
+        "use generic data types in programs",
+        "work with collections of objects from related classes polymorphically",
+        "explain the difference between classes and interfaces",
+        "define interfaces that specify behaviors that certain objects must have",
+        "perform input and output with text file streams",
+        "perform input and output with xml file streams and serialization",
+        "use an API as a reference when writing programs",
+        "build attractive, intuitive graphical user interfaces",
+        "write programs that use a graphical interface and manage user events using event-handling",
+        "describe and use the client-server computing model",
+        "define serialization",
+        "compare the advantages and disadvantages of various serialization sources and destinations",
+        "write a program that stores and retrieves data with a relational database",
+        "describe how Java achieves cross-platform compatibility",
+        "distinguish among heavyweight and lightweight components",
+        "define callback function as it relates to event handling",
+        "respond to user events in Java and Python",
+        "describe how layout managers arrange components",
+        "write unit tests to verify the correctness of software modules",
+        "manage programming projects using git"
+    ],
+    "programOutcomes": [
+        {
+            "value": 1,
+            "outcome": "develop programs using languages having different programming paradigms and for a variety of platforms"
+        },
+        {
+            "value": 2,
+            "outcome": "select the most appropriate data structures and algorithms for the given problem"
+        },
+        {
+            "value": 7,
+            "outcome": "explain how programming languages are designed and implemented"
+        }
+    ],
+    "baccalaureateCharacteristics": [
+        {
+            "value": 1,
+            "outcome": "Essential Skills"
+        },
+        {
+            "value": 6,
+            "outcome": "Critical Thinking"
+        }
+    ],
+    "textBook": "No textbook is required",
+    "modules": [
+        "stuff",
+        "stuff"
+    ]
+}
