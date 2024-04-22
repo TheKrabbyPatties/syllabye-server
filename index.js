@@ -39,6 +39,22 @@ app.use((err, request, response, next) => {
     response.send('500 - Server Error')
 })
 
+const { MongoClient } = require('mongodb');
+
+const uri = "mongodb+srv://KrabbyPatties:WhoLiv3sInAPin3appl3%3F@syllabyedb.pdubk1g.mongodb.net/?retryWrites=true&w=majority&appName=SyllaByeDB";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+async function connectToDatabase() {
+  try {
+    await client.connect();
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+}
+
+connectToDatabase();
+
 app.listen(port, () => console.log(
     `Express started at \"http://localhost:${port}\"\n` +
     `press Ctrl-C to terminate.`)
