@@ -11,6 +11,8 @@ const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 3
 
+app.use(cors({origin: '*' }));
+
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
@@ -23,25 +25,25 @@ app.get('/api/ping', (request, response) => {
 	response.send('ping response')
 })
 
-//app.use(express.json({ limit: '50mb' }));
-//
-//app.post('/endpoint', (req, res) => {
-//    const data = req.body; 
-//    const filePath = './JSON/file.json';
-//
-//    // Convert JSON object to string
-//    const dataString = JSON.stringify(data, null, 4);
-//
-//    // Write the string to a file
-//    fs.writeFile(filePath, dataString, 'utf8', (err) => {
-//        if (err) {
-//            console.error(err);
-//            res.status(500).json({ message: 'Failed to save data' });
-//        } else {
-//            res.json({ message: 'Data saved successfully' });
-//        }
-//    });
-//});
+app.use(express.json({ limit: '50mb' }));
+
+app.post('/endpoint', (req, res) => {
+    const data = req.body; 
+    const filePath = './JSON/file.json';
+
+    // Convert JSON object to string
+    const dataString = JSON.stringify(data, null, 4);
+
+    // Write the string to a file
+    fs.writeFile(filePath, dataString, 'utf8', (err) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Failed to save data' });
+        } else {
+            res.json({ message: 'Data saved successfully' });
+        }
+    });
+});
 
 // Custom 404 page.
 app.use((request, response) => {
