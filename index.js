@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 3
 
-app.use(cors({ origin: '*' }))
+app.use(cors({ origin: 'https://thankful-mud-0f7336110.5.azurestaticapps.net' }))
 
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
