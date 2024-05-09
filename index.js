@@ -11,8 +11,6 @@ const port = process.env.PORT || 3000
 const majorVersion = 1
 const minorVersion = 3
 
-app.use(cors());
-
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
