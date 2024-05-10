@@ -1,0 +1,24 @@
+{
+    "instructor-info": {
+        "name": "",
+        "office-hours": "",
+        "office-location": "",
+        "email": "",
+        "phone-number": "",
+        "zoom-link": ""
+    },
+    "course-information": {
+        "course-name": "",
+        "course-number": "",
+        "course-section": "",
+        "term": "8-week",
+        "credit-hours": "",
+        "course-description": "",
+        "meeting-times": "",
+        "meeting-days": []
+    },
+    "course-materials": {
+        "textbooks": "",
+        "supplements": ""
+    }
+}

@@ -27,7 +27,7 @@ app.get('/api/ping', (request, response) => {
 
 app.use(express.json({ limit: '50mb' }));
 
-app.post('/endpoint', (req, res) => {
+app.post('/save/json', (req, res) => {
     const data = req.body; 
     const filePath = './JSON/file.json';
 
