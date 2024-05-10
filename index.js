@@ -25,6 +25,25 @@ app.get('/api/ping', (request, response) => {
 	response.send('ping response')
 })
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/data', (req, res) => {
+  const filePath = path.join(__dirname,'public','courses.json');
+
+
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      console.error('Error reading JSON file:', err);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+
+    
+    const jsonData = JSON.parse(data);
+
+    res.json(jsonData);
+  });
+});
+
 app.use(express.json({ limit: '50mb' }));
 
 app.post('/save/json', (req, res) => {

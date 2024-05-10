@@ -1,0 +1,20 @@
+{
+
+    "courses":[
+
+    {"name":"Object-Oriented Programming",
+    "id": "CPSC-24500",
+    "section": 24500,
+    "hours": 3,
+    "description": "Students will learn to design and develop software using the object-oriented approach. \nTopics include encapsulation, inheritance, polymorphism, abstraction, and patterns. \nStudents will learn how to use an SDK to develop desktop and web applications that provide data processing and visualization services. \nStudents will also learn how to manage threads and networking connections in software they write."
+},
+
+
+    {"name":"Software Engineering",
+    "id": "CPSC-44000",
+    "section": 44000,
+    "hours": 3,
+    "description": "Methods, strategies, and tools for implementing software systems, particularly as part of a development team. \n\t\tTopics include the software development life cycle, Unified Modeling Language, software testing techniques, \n\t\tsoftware security, open-source development, requirements gathering and documentation, maintenance, and basic\n\t\tsoftware project management."
+}
+    ]
+}
