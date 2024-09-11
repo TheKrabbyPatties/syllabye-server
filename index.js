@@ -25,7 +25,7 @@ app.get('/api/ping', (request, response) => {
 	response.send('ping response')
 })
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/data', (req, res) => {
   const filePath = path.join(__dirname,'public','courses.json');
