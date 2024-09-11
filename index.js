@@ -25,7 +25,7 @@ app.get('/api/ping', (request, response) => {
 	response.send('ping response')
 })
 
-app.use(express.json({ limit: '50mb' }));
+// app.use(express.json({ limit: '50mb' }));
 
 app.post('/endpoint', (req, res) => {
     const data = req.body; 
@@ -60,6 +60,7 @@ app.use((err, request, response, next) => {
     response.send('500 - Server Error')
 })
 
+/*
 const { MongoClient } = require('mongodb');
 
 const uri = "mongodb+srv://KrabbyPatties:WhoLiv3sInAPin3appl3%3F@syllabyedb.pdubk1g.mongodb.net/?retryWrites=true&w=majority&appName=SyllaByeDB";
@@ -75,7 +76,7 @@ async function connectToDatabase() {
 }
 
 connectToDatabase();
-
+*/
 app.listen(port, () => console.log(
     `Express started at \"http://localhost:${port}\"\n` +
     `press Ctrl-C to terminate.`)
