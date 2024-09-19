@@ -37,14 +37,14 @@ app.get('/data', (req, res) => {
       return res.status(500).json({ error: 'Internal server error' });
     }
 
-    
     const jsonData = JSON.parse(data);
 
     res.json(jsonData);
   });
 });
 
-// app.use(express.json({ limit: '50mb' }));
+/*
+app.use(express.json({ limit: '50mb' }));
 
 app.post('/save/json', (req, res) => {
     const data = req.body; 
@@ -63,6 +63,7 @@ app.post('/save/json', (req, res) => {
         }
     });
 });
+*/
 
 // Custom 404 page.
 app.use((request, response) => {
