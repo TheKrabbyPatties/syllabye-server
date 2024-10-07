@@ -63,6 +63,9 @@ app.get('/data', (req, res) => {
   });
 });
 
+// Enable preflight requests for the /submit-course-materials endpoint
+app.options('/submit-course-materials', cors()); // Enable CORS for preflight
+
 // Route to handle POST requests for course materials
 app.post('/submit-course-materials', (req, res) => {
   const { textbooks, supplements } = req.body;
