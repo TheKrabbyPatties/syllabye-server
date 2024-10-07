@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const { initializeApp } = require('firebase/app');
@@ -64,9 +67,9 @@ app.get('/data', (req, res) => {
 app.post('/submit-course-materials', (req, res) => {
   const { textbooks, supplements } = req.body;
 
-  if (!textbooks || !supplements) {
-    return res.status(400).json({ error: 'Missing textbooks or supplements information' });
-  }
+  // if (!textbooks || !supplements) {
+  //   return res.status(400).json({ error: 'Missing textbooks or supplements information' });
+  // }
 
   // Store data in Firebase Realtime Database
   set(ref(db, 'materials/' + textbooks), {
