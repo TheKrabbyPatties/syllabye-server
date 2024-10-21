@@ -65,7 +65,7 @@ app.post('/submit-course-materials', (req, res) => {
       res.status(500).json({ error: 'Failed to store data in Firebase' });
     });
 });
-*/
+
 
 // Custom 404 page.
 app.use((request, response) => {
