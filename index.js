@@ -1,4 +1,7 @@
-const express = require('express');
+const express = require('express'),
+app = express();
+
+// const express = require('express');
 const bodyParser = require('body-parser');
 const { initializeApp } = require('firebase/app');
 const { getDatabase, ref, set } = require('firebase/database');
