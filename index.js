@@ -1,6 +1,7 @@
 const express = require('express'),
 app = express();
-
+// Middleware to parse JSON bodies
+app.use(express.json());  // This is required for parsing JSON bodies
 // const express = require('express');
 const bodyParser = require('body-parser');
 const { initializeApp } = require('firebase/app');
