@@ -17,6 +17,9 @@ const minorVersion = 3
 
 app.use(cors({origin: '*' }));
 
+//this is necessary for the .env file to work 
+require('dotenv').config();
+
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
@@ -28,6 +31,19 @@ app.get('/api/ping', (request, response) => {
 	response.type('text/plain')
 	response.send('ping response')
 })
+
+//this ensures the client can fetch the Firebase config 
+app.get('/firebase-config', (req, res) => {
+  res.json({
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID
+  });
+});
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
@@ -47,27 +63,27 @@ app.get('/data', (req, res) => {
   });
 });
 
-// Route to handle POST requests for course materials
-app.post('/submit-course-materials', (req, res) => {
-  const { textbooks, supplements } = req.body;
+// // Route to handle POST requests for course materials
+// app.post('/submit-course-materials', (req, res) => {
+//   const { textbooks, supplements } = req.body;
 
-  if (!textbooks || !supplements) {
-    return res.status(400).json({ error: 'Missing textbooks or supplements information' });
-  }
+//   if (!textbooks || !supplements) {
+//     return res.status(400).json({ error: 'Missing textbooks or supplements information' });
+//   }
 
-  // Store data in Firebase Realtime Database
-  set(ref(db, 'materials/' + textbooks), {
-    textbooks: textbooks,
-    supplements: supplements
-  })
-    .then(() => {
-      res.json({ message: 'Data entry successful!' });
-    })
-    .catch((error) => {
-      console.error('Error storing data in Firebase:', error);
-      res.status(500).json({ error: 'Failed to store data in Firebase' });
-    });
-});
+//   // Store data in Firebase Realtime Database
+//   set(ref(db, 'materials/' + textbooks), {
+//     textbooks: textbooks,
+//     supplements: supplements
+//   })
+//     .then(() => {
+//       res.json({ message: 'Data entry successful!' });
+//     })
+//     .catch((error) => {
+//       console.error('Error storing data in Firebase:', error);
+//       res.status(500).json({ error: 'Failed to store data in Firebase' });
+//     });
+// });
 
 
 // Custom 404 page.
